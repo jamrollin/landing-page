@@ -22,11 +22,53 @@ html, body {
 all the elements in the HTML will have 0 padding, 0 margins and box-sizing: border-box
  */
 
+ p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    margin: 0;
+    font-size: inherit; 
+  }
+
+/* reusable styling*/
 .wrapper {
     padding: 8px 90px;  
     /* adds padding to wrapper */
-     
 }
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.small-white-font {
+    color: #e5e7eb;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.icon {
+    width: 83px;
+    height: 77px;
+}
+
+main, .content, .quote, footer {
+    flex: 1 0 33.33%;
+    min-height: 356px;
+}
+
+.footer.wrapper, .sign-up {
+    background-color: #3882F6;
+}
+
+/* ---- */
 
 .logo {
     width: 50px;
@@ -39,12 +81,11 @@ all the elements in the HTML will have 0 padding, 0 margins and box-sizing: bord
     color: #f9faf8;
     display: flex;    
     justify-content: space-between;
-}
+} 
 
 header {
     font-size: 24px;
 }
-
 
 ul {
     display: flex;
@@ -58,38 +99,73 @@ a {
     text-decoration: none;
 }
 
+.hero.text {
+    margin: 40px 150px 0px;    
+}
+
 .hero.image {
     width: 900px;
     height: auto;
     border-radius: 10px;
 }
 
-.hero.text {
-    text-align: center;
-    margin: 40px 150px 0px;
-    width: 340px;
-    
-}
-
-.main{
+.headline{
     font-size: 48px;
     font-weight: 900;
-    margin-bottom: 20px;
-
 }
 
-.subtext {
-    font-size: 18px;
-    color: #e5e7eb;
-    margin-bottom: 20px;
-}
-
-.sign-up {
-    background-color: #3882F6;
+.sign-up {    
     border: none;
     padding: 9px 24px;
     font-size: 14px;
     border-radius: 14px;
 }
 
+.main.info {
+    font-size: 36px;
+    color: #1f2937;
 
+}
+
+.content.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.tiles {
+    display: flex;
+    gap: 14px;
+    margin-right: -15px;
+    margin-left: -15px
+}
+
+.quote {
+    background-color: #e5e7eb;
+    font-size: 36px;
+    color: #1f2937;
+    font-weight: light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signature {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 900;
+}
+
+footer > .wrapper {
+    color: #f9faf8;
+    display: flex;
+    justify-content: space-between;
+    margin: 120px;
+    padding: 40px;
+}
+
+.footer.sign-up {
+    border: solid #ffffff 3px;
+    color: #f9faf8;
+    display: flex;
+    justify-content: flex-end;
+}
